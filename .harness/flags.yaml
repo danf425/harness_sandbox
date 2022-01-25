@@ -1,35 +1,4 @@
 featureFlags:
-  flags:
-  - flag:
-      name: Simple Boolean
-      identifier: Simple_Boolean
-      description: ""
-      permanent: false
-      spec:
-        type: boolean
-        default:
-          onVariation: "true"
-          offVariation: "false"
-        variations:
-        - identifier: "true"
-          value: "true"
-        - identifier: "false"
-          value: "false"
-      environments:
-      - identifier: Dev
-        default:
-          onVariation: "true"
-          offVariation: "false"
-        state: "off"
-      - identifier: QA
-        default:
-          onVariation: "true"
-          offVariation: "false"
-        state: "off"
-      - identifier: envprod
-        default:
-          onVariation: "true"
-          offVariation: "false"
-        state: "off"
+  flags: []
   projectIdentifier: DanF
   orgIdentifier: default
