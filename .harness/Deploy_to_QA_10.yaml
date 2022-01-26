@@ -27,7 +27,7 @@ template:
                     type: KubernetesDirect
                     spec:
                         connectorRef: danfmacconnector
-                        namespace: default
+                        namespace: temp-qa
                         releaseName: release-<+INFRA_KEY>
                 allowSimultaneousDeployments: false
                 environmentRef: QA
