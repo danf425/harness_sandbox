@@ -30,6 +30,21 @@ template:
                                           tag: latest
                                       identifier: Sidecar Test
                                       type: DockerRegistry
+                        manifests:
+                            - manifest:
+                                  identifier: lnanginx
+                                  type: K8sManifest
+                                  spec:
+                                      store:
+                                          type: Github
+                                          spec:
+                                              connectorRef: DanFGithub
+                                              gitFetchType: Branch
+                                              paths:
+                                                  - _story-devk8s/se-ecomm/se-recommendation.yaml
+                                              repoName: lna-demo
+                                              branch: master
+                                      skipResourceVersioning: false
             infrastructure:
                 infrastructureDefinition:
                     type: KubernetesDirect
