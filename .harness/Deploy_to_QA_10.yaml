@@ -22,6 +22,14 @@ template:
                                     imagePath: library/nginx
                                     tag: <+input>
                                 type: DockerRegistry
+                            sidecars:
+                                - sidecar:
+                                      spec:
+                                          connectorRef: Docker_Dmontanez
+                                          imagePath: library/busybox
+                                          tag: latest
+                                      identifier: Sidecar Test
+                                      type: DockerRegistry
             infrastructure:
                 infrastructureDefinition:
                     type: KubernetesDirect
