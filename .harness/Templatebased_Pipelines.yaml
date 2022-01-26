@@ -1,0 +1,25 @@
+pipeline:
+    name: Template-based Pipelines
+    identifier: Templatebased_Pipelines
+    projectIdentifier: DanF
+    orgIdentifier: default
+    tags: {}
+    stages:
+        - stage:
+              name: Deploy to QA
+              identifier: Deploy_to_QA
+              template:
+                  templateRef: Deploy_to_QA
+                  versionLabel: "1.0"
+                  templateInputs:
+                      type: Deployment
+                      spec:
+                          serviceConfig:
+                              serviceDefinition:
+                                  type: Kubernetes
+                                  spec:
+                                      artifacts:
+                                          primary:
+                                              type: DockerRegistry
+                                              spec:
+                                                  tag: <+input>
