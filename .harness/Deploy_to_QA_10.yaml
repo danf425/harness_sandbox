@@ -20,7 +20,7 @@ template:
                                 spec:
                                     connectorRef: Docker_Dmontanez
                                     imagePath: library/nginx
-                                    tag: <+input>.allowedValues(latest,1.2.10,3.5.0)
+                                    tag: latest
                                 type: DockerRegistry
                             sidecars:
                                 - sidecar:
