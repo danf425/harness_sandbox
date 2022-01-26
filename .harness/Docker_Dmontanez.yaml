@@ -1,0 +1,17 @@
+connector:
+  name: Docker Dmontanez
+  identifier: Docker_Dmontanez
+  description:
+  orgIdentifier: default
+  projectIdentifier: DanF
+  type: DockerRegistry
+  spec:
+    dockerRegistryUrl: https://hub.docker.com/
+    providerType: DockerHub
+    auth:
+      type: UsernamePassword
+      spec:
+        username: dmontanez
+        passwordRef: df_docker_pw
+    delegateSelectors:
+    - df-mac-ng
