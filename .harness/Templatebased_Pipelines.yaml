@@ -22,4 +22,4 @@ pipeline:
                                           primary:
                                               type: DockerRegistry
                                               spec:
-                                                  tag: <+input>
+                                                  tag: <+input>.allowedValues(latest,1.2.10,3.5.0)
