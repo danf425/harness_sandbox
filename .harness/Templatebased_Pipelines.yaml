@@ -11,15 +11,3 @@ pipeline:
               template:
                   templateRef: Deploy_to_QA
                   versionLabel: "1.0"
-                  templateInputs:
-                      type: Deployment
-                      spec:
-                          serviceConfig:
-                              serviceDefinition:
-                                  type: Kubernetes
-                                  spec:
-                                      artifacts:
-                                          primary:
-                                              type: DockerRegistry
-                                              spec:
-                                                  tag: <+input>.allowedValues(latest,1.2.10,3.5.0)
