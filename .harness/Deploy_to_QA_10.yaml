@@ -41,7 +41,7 @@ template:
                                               connectorRef: DanFGithub
                                               gitFetchType: Branch
                                               paths:
-                                                  - _story-devk8s/se-ecomm/se-recommendation.yaml
+                                                  - k8s/_story-devk8s/se-ecomm/se-recommendation.yaml
                                               repoName: lna-demo
                                               branch: master
                                       skipResourceVersioning: false
