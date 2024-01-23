@@ -20,7 +20,9 @@ pipeline:
                   name: Update Release Repo
                   identifier: updateReleaseRepo
                   timeout: 10m
-                  spec: {}
+                  spec:
+                    variables: []
+                    prTitle: "Harness: Updating Image Tag for Clusters in <+env.name>"
               - step:
                   type: MergePR
                   name: Merge PR
