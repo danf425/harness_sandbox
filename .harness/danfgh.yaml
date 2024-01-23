@@ -1,0 +1,23 @@
+connector:
+  name: danf-gh
+  identifier: danfgh
+  description: ""
+  orgIdentifier: default
+  projectIdentifier: DanF
+  type: Github
+  spec:
+    url: https://github.com/danf425
+    validationRepo: guestbook-delivery
+    authentication:
+      type: Http
+      spec:
+        type: UsernameToken
+        spec:
+          username: danf425
+          tokenRef: new_secret_danf
+    apiAccess:
+      type: Token
+      spec:
+        tokenRef: new_secret_danf
+    executeOnDelegate: false
+    type: Account
