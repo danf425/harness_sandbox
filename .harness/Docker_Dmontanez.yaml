@@ -12,5 +12,4 @@ connector:
       spec:
         username: dmontanez
         passwordRef: df_docker_pw
-    delegateSelectors:
-    - df-mac-ng
+    executeOnDelegate: false
