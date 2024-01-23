@@ -45,6 +45,10 @@ pipeline:
                     primary:
                       primaryArtifactRef: <+input>
                       sources: <+input>
+                  variables:
+                    - name: image_tag
+                      type: String
+                      value: <+input>
           environment:
             environmentRef: Dev
             deployToAll: false
