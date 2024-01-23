@@ -39,7 +39,10 @@ pipeline:
             serviceRef: guestbook
           environment:
             environmentRef: Dev
-            deployToAll: true
+            deployToAll: false
+            gitOpsClusters:
+              - identifier: danf_local
+                agentIdentifier: gitopsagent
         tags: {}
         failureStrategies:
           - onFailure:
