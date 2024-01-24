@@ -80,4 +80,4 @@ pipeline:
               action:
                 type: StageRollback
         delegateSelectors:
-          - helm-delegate
+          - kubernetes-delegate
