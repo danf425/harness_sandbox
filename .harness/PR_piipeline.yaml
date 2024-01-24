@@ -67,11 +67,11 @@ pipeline:
                       type: String
                       value: <+input>
           environment:
-            environmentRef: Dev
+            environmentRef: dev
             deployToAll: false
             gitOpsClusters:
-              - identifier: danf_local
-                agentIdentifier: gitopsagent
+              - identifier: devcluster
+                agentIdentifier: devgitops1
         tags: {}
         failureStrategies:
           - onFailure:
