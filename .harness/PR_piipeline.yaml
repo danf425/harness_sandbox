@@ -53,7 +53,7 @@ pipeline:
                   spec: {}
             rollbackSteps: []
           service:
-            serviceRef: guestbook
+            serviceRef: guestbookpr
             serviceInputs:
               serviceDefinition:
                 type: Kubernetes
