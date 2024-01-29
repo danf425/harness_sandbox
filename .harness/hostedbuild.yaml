@@ -1,0 +1,37 @@
+pipeline:
+  name: hosted-build
+  identifier: hostedbuild
+  projectIdentifier: DanF
+  orgIdentifier: default
+  tags: {}
+  properties:
+    ci:
+      codebase:
+        connectorRef: danfgh
+        repoName: guestbook-delivery
+        build: <+input>
+  stages:
+    - stage:
+        name: test
+        identifier: test
+        description: ""
+        type: CI
+        spec:
+          cloneCodebase: true
+          platform:
+            os: Linux
+            arch: Amd64
+          runtime:
+            type: Cloud
+            spec: {}
+          execution:
+            steps:
+              - step:
+                  type: Run
+                  name: Run_1
+                  identifier: Run_1
+                  spec:
+                    shell: Sh
+                    command: |
+                      echo "hi"
+                      echo <+pipeline.variable>
