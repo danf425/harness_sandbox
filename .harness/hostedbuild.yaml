@@ -11,7 +11,7 @@ pipeline:
         description: ""
         type: CI
         spec:
-          cloneCodebase: true
+          cloneCodebase: false
           platform:
             os: Linux
             arch: Amd64
@@ -41,8 +41,3 @@ pipeline:
       description: ""
       required: false
       value: <+input>
-  properties:
-    ci:
-      codebase:
-        repoName: <+input>
-        build: <+input>
