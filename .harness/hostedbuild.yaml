@@ -29,6 +29,7 @@ pipeline:
                     command: |-
                       echo "hi"
                       echo <+pipeline.variables.gl_tag>
+                      echo <+trigger.payload.gl_tag>
           caching:
             enabled: false
             paths: []
