@@ -32,6 +32,12 @@ pipeline:
                   identifier: Run_1
                   spec:
                     shell: Sh
-                    command: |
+                    command: |-
                       echo "hi"
-                      echo <+pipeline.variable>
+                      echo <+pipeline.variables.gl_tag>
+  variables:
+    - name: gl_tag
+      type: String
+      description: ""
+      required: false
+      value: <+input>
