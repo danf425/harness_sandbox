@@ -4,12 +4,6 @@ pipeline:
   projectIdentifier: DanF
   orgIdentifier: default
   tags: {}
-  properties:
-    ci:
-      codebase:
-        connectorRef: danfgh
-        repoName: guestbook-delivery
-        build: <+input>
   stages:
     - stage:
         name: test
@@ -17,7 +11,7 @@ pipeline:
         description: ""
         type: CI
         spec:
-          cloneCodebase: true
+          cloneCodebase: false
           platform:
             os: Linux
             arch: Amd64
@@ -35,6 +29,11 @@ pipeline:
                     command: |-
                       echo "hi"
                       echo <+pipeline.variables.gl_tag>
+          caching:
+            enabled: false
+            paths: []
+          slsa_provenance:
+            enabled: false
   variables:
     - name: gl_tag
       type: String
